@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+        id 'eclipse'
+}
+
+group = 'com.pdb'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.springframework.boot:spring-boot-starter-aop'
+implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
+implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+test {
+	useJUnitPlatform()
+}
